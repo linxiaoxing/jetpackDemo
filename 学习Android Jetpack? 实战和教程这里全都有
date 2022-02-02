@@ -1,0 +1,85 @@
+学习Android Jetpack? 实战和教程这里全都有！
+
+九心_
+13
+2019.07.14 23:54:38
+字数 1,657
+阅读 18,091
+技术不止，文章有料，加 JiuXinDev 入群，Android 搬砖路上不孤单
+
+前言
+在之前一个月的里，我系统的学习了Android Jetpack组件，并输出了即学即用Android Jetpack系列文章🚀：
+
+第一篇：《即学即用Android Jetpack - Navigation》
+第二篇：《即学即用Android Jetpack - Data Binding》
+第三篇：《即学即用Android Jetpack - ViewModel & LiveData》
+第四篇：《即学即用Android Jetpack - Room》
+第五篇：《即学即用Android Jetpack - Paging》
+第六篇：《即学即用Android Jetpack - WorkManger》
+第七篇：《即学即用Android Jetpack - Startup》
+第八篇：《即学即用Android Jetpack - Paging 3》
+
+该系列文章的意义在于指导初学者从零到一搭建一个MVVM + Anroid Jetpack组件的App，最终完成一个如下的案例：
+
+图片	图片
+注册登录
+选择品牌
+点击喜欢
+更换头像
+项目地址：https://github.com/mCyp/Hoo
+
+确认过眼神，是迷恋鞋的人~。需要且必要说明的是，该项目的一部分参考自谷歌的官方示例：android-sunflower
+
+本项目采用的语言是Kotlin，为什么是Kotlin？显然，谷歌已经宣布Kotlin成为开发安卓的首选语言，且今后的新出的东西会优先支持Kotlin。
+
+为什么是Android Jetpack?
+1. 从零到一搭建
+Android Jetpack是谷歌推出的加快Android应用开发的组件，而本应用使用的一部分仅仅是左上角绿色的一部分：
+Jetpack
+这张图其实有点旧了，因为在今年五月份的谷歌开发者大会，推出了CameraX。不过，仍然可以预见的是，谷歌在致力于安卓生态环境的搭建。
+我的Demo采用MVVM的设计模式，这一点可以从我的架构图可以看出：
+
+
+系统架构
+
+示例Demo少了网络请求的部分，不过我觉得对于指导整体搭建的影响不是很大。
+
+2. Android Jetpack为我们做了什么？
+其实我觉得这个问题可以简化为Android Jetpack组件的作用是什么？
+
+Navigation：一个用于管理Fragment切换的工具类，可视化、可绑定控件、支持动画等是其优点。
+Data Binding：不用说，都知道，加速MVVM的创建。
+Lifecycle：虽然我没有写文章介绍，但是不代表它的作用不够强大，他是我们能够处理Activity和Fragment的生命周期的重要原因，在AndroidX的Fragment和Activity已经对Lifecycle提供了默认支持。
+ViewModel：当做MVVM的ViewModel层，并具有声明周期意识的处理和UI相关的数据。
+LiveData：同RxJava的作用一样，对数据进行监听，优点就是无需处理生命周期、无内存泄漏等。
+Room：强大的ORM数据库框架。
+Paging：易于使用的数据分页库，支持RecyclerView。
+WorkManager：灵活、简单、延迟和保证执行的后台任务处理库。
+3. 你可能选择Android Jetpack的原因
+以下可能是你会选择Android Jetpack的原因：
+
+一起使用更方便：因为Android Jetpack组件中的很多库都对其他库提供了支持，比如Room和Paging就对LiveData提供了支持。
+向后兼容：基本上每个组件都对低版本提供了支持。
+支持RxJava：由于RxJava强大的生态环境，几乎和数据相关的组件都对RxJava提供了支持。
+减少代码量：以Data Binding + ViewModel + LiveData或RxJava构建的MVVM模式能够显著减少代码量，比较平时使用的MVP模式也会更加方便，无需主动更新UI。
+无需捆绑：Android Jetpack系列组件可以无需捆绑使用，你如果只想用里面的单个库，那么就可以仅仅依赖一个库。
+Android Jetpack的一些缺点
+即使Android Jetpack来自于谷歌官方，但是你也可能有太多的理由拒绝它！比如：
+
+RxJava那么强大，我会什么要选择LiveData?
+Navigation的底层对Fragment的管理直接采取了替换的方式，虽然它可以配合BottomNavigationView使用，但每次都重新加载显然是不合理的。
+Room和其他数据库框架相比，显然没有什么的优势，并且，我为什么还要多学一种数据库框架呢？并且，Room的迁移也比较繁琐。
+...
+其实，比较难以让人难以接受的也就LiveData和Navigation的替换方式的采取，其他而言，Android Jetpack系列组件仍然值得一试。
+
+Android Jetpack要学吗？
+学，肯定要学，Android Jetpack于谷歌而言，这是他们重新整理和统一安卓生态环境决心的体现，Android Jetpack所展现的内容，也是谷歌想拓展和维护的方向。于长期苦恼于第三方库选择的广大Android开发者而言，这是谷歌为我们提供的一盏明灯。
+
+也许，Android Jetpack系列的部分库还没成熟到成为你工作的第一选择，但是，深入学习Android Jetpack组件会为你提供与谷歌大佬深入交流的机会，为你日常的开发带来一些想法，不过，遗憾的是，即学即用Android Jetpack系列博客的目的仅仅是为初学者提供入门指导，对于进阶研究，可以阅读却把青梅嗅的《Android Jetpack专栏》。
+
+写在最后的话
+除去可以学到Kotlin + MVVM + Android Jetpack的知识，相信你还可以在我的项目中学到：
+
+ConstraintLayout的使用，几乎每个界面布局都采用的ConstraintLayout。
+符合《阿里Android开发手冊》的标准化资源命名方式。
+如果即学即用系列博客和开源项目Hoo能够给你带来帮助，那也是我所希望看到，感谢阅读~
