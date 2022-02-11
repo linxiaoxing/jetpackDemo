@@ -16,13 +16,17 @@ if (foo != null){
 }
 
 2.2、 ?:
+
 (https://img-blog.csdn.net/20180525102809224?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xja2o2ODY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 2.3、 as?
+
 (https://img-blog.csdn.net/20180525102830720?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xja2o2ODY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 2.4、 !!
+
 (https://img-blog.csdn.net/2018052510284732?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xja2o2ODY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 2.5、 ？
+
 (https://img-blog.csdn.net/20180525110440446?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xja2o2ODY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
