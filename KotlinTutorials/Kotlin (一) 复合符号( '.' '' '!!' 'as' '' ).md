@@ -12,7 +12,6 @@
 if (foo != null){
     return foo.bar()
 }else{
-
     return null
 }
 
