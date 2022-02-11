@@ -1,55 +1,24 @@
 package com.example.jetpackdemo.db
 
+import android.content.Context
 import androidx.paging.PagingSource
 import com.example.jetpackdemo.db.dao.ShoeDao
 import com.example.jetpackdemo.db.data.Shoe
+import com.example.jetpackdemo.db.repository.ShoeRepository
 
-class ShoeRepository private constructor(private val shoeDao: ShoeDao) {
-
-    /**
-     * 通过id的范围寻找鞋子
-     */
-    fun getPageShoes(startIndex: Long, endIndex: Long): List<Shoe> =
-        shoeDao.findShoesByIndexRange(startIndex, endIndex)
-
-    fun getAllShoes() = shoeDao.getAllShoesLD()
+object RepositoryProvider {
 
     /**
-     * 通过品牌查询鞋子
+     * 得到用户仓库
      */
-    fun getShoesByBrand(brand: Array<String>) = shoeDao.findShoesByBrandLD(brand)
+//    fun providerUserRepository(context: Context): UserRepository {
+//        return UserRepository.getInstance(AppDataBase.getInstance(context).userDao())
+//    }
 
     /**
-     * 通过Id查询一双鞋
+     * 得到鞋的本地仓库
      */
-    fun getShoeById(id: Long) = shoeDao.findShoeByIdLD(id)
-
-    /**
-     * 查询用户收藏的鞋
-     */
-    fun getShoesByUserId(userId: Long) = shoeDao.findShoesByUserId(userId)
-
-    /**
-     * 插入鞋子的集合
-     */
-    fun insertShoes(shoes: List<Shoe>) = shoeDao.insertShoes(shoes)
-
-    fun getAllShoesPagingSource(): PagingSource<Int, Shoe> = shoeDao.getAllShoesLD()
-
-    fun getShoesByBrandPagingSource(brand: Array<String>): PagingSource<Int, Shoe> =
-        shoeDao.findShoesByBrandLD(brand)
-
-    companion object {
-        @Volatile
-        private var instance: ShoeRepository? = null
-
-        fun getInstance(shoeDao: ShoeDao): ShoeRepository =
-            instance ?: synchronized(this) {
-                instance
-                    ?: ShoeRepository(shoeDao).also {
-                        instance = it
-                    }
-            }
-
+    fun providerShoeRepository(context: Context): ShoeRepository {
+        return ShoeRepository.getInstance(AppDataBase.getInstance(context).shoeDao())
     }
 }

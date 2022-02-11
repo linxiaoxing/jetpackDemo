@@ -9,9 +9,11 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import com.example.jetpackdemo.common.BaseConstant
+import com.example.jetpackdemo.db.dao.ShoeDao
 import com.example.jetpackdemo.db.dao.UserDao
 import com.example.jetpackdemo.db.data.User
 import com.example.jetpackdemo.utils.AppPrefsUtils
+import com.example.jetpackdemo.worker.ShoeWorker
 
 /**
  * 数据库文件
@@ -27,16 +29,18 @@ abstract class AppDataBase: RoomDatabase() {
     // 得到UserDao
     abstract fun userDao(): UserDao
 
+    // 得到ShoeDao
+    abstract fun shoeDao(): ShoeDao
+
     companion object {
         @Volatile
         private var instance: AppDataBase? = null
 
         fun getInstance(context: Context): AppDataBase {
             return instance ?: synchronized(this) {
-                instance?: buildDataBase(context)
-                    .also {
-                        instance = it
-                    }
+                instance?: buildDataBase(context).also {
+                    instance = it
+                }
             }
         }
 
