@@ -5,6 +5,7 @@
 《Kotlin 实战》小人系列，的这本书里 画的图很清晰了，我又重画了一遍。
 
 2.1、 ?.安全调用符
+
 !这里写图片描述
 (https://img-blog.csdn.net/20180525102820532?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xja2o2ODY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
