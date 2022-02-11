@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.navigationcomponentstutorials.fragment.main.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_mainFragment_notificationDetailFragment"
+            app:destination="@+id/notificationDetailFragment" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_postDetailFragment"
+            app:destination="@+id/postDetailFragment" />
+
+    </fragment>
+
+    <!-- Notification Detail -->
+    <fragment
+        android:id="@+id/notificationDetailFragment"
+        android:name="com.example.navigationcomponentstutorials.fragment.blankfragment.NotificationDetailFragment"
+        android:label="Notification Detail Fragment"
+        tools:layout="@layout/fragment_notification_detail" />
+
+    <fragment
+        android:id="@+id/postDetailFragment"
+        android:name="com.example.navigationcomponentstutorials.fragment.blankfragment.PostDetailFragment"
+        android:label="PostDetailFragment"
+        tools:layout="@layout/fragment_post_detail">
+
+        <argument android:name="post"
+            app:argType="com.example.navigationcomponentstutorials.api.Post" />
+
+    </fragment>
+</navigation>
