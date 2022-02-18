@@ -26,6 +26,10 @@ android {
         }
     }
 
+    dataBinding {
+        enabled true
+    }
+
     sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
 
     // Configure only for each module that uses Java 8

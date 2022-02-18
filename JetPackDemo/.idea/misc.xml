@@ -5,11 +5,17 @@
       <map>
         <entry key="..\:/Users/owner/Desktop/JetPack/JetPackDemo/app/src/main/res/drawable/ic_right.xml" value="0.1" />
         <entry key="..\:/Users/owner/Desktop/JetPack/JetPackDemo/app/src/main/res/layout/activity_main.xml" value="0.171875" />
+        <entry key="..\:/Users/owner/Desktop/JetPack/JetPackDemo/app/src/main/res/layout/empty_layout.xml" value="0.1390625" />
+        <entry key="..\:/Users/owner/Desktop/JetPack/JetPackDemo/app/src/main/res/layout/favourite_fragment.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/owner/Desktop/JetPack/JetPackDemo/app/src/main/res/layout/login_activity.xml" value="0.1578125" />
-        <entry key="..\:/Users/owner/Desktop/JetPack/JetPackDemo/app/src/main/res/layout/login_fragment.xml" value="0.16802536231884058" />
+        <entry key="..\:/Users/owner/Desktop/JetPack/JetPackDemo/app/src/main/res/layout/login_fragment.xml" value="0.1" />
         <entry key="..\:/Users/owner/Desktop/JetPack/JetPackDemo/app/src/main/res/layout/login_navigation.xml" value="0.1578125" />
+        <entry key="..\:/Users/owner/Desktop/JetPack/JetPackDemo/app/src/main/res/layout/me_fragment.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/owner/Desktop/JetPack/JetPackDemo/app/src/main/res/layout/register_fragment.xml" value="0.16802536231884058" />
+        <entry key="..\:/Users/owner/Desktop/JetPack/JetPackDemo/app/src/main/res/layout/shoe_fragment.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/owner/Desktop/JetPack/JetPackDemo/app/src/main/res/layout/shoe_recycler_item.xml" value="0.20652173913043478" />
         <entry key="..\:/Users/owner/Desktop/JetPack/JetPackDemo/app/src/main/res/layout/welcome_fragment.xml" value="0.171875" />
+        <entry key="..\:/Users/owner/Desktop/JetPack/JetPackDemo/app/src/main/res/menu/menu_main.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/owner/Desktop/JetPack/JetPackDemo/app/src/main/res/navigation/login_navigation.xml" value="0.16802536231884058" />
       </map>
     </option>

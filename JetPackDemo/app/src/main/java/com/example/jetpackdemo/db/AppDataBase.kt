@@ -11,6 +11,8 @@ import androidx.work.WorkManager
 import com.example.jetpackdemo.common.BaseConstant
 import com.example.jetpackdemo.db.dao.ShoeDao
 import com.example.jetpackdemo.db.dao.UserDao
+import com.example.jetpackdemo.db.data.FavouriteShoe
+import com.example.jetpackdemo.db.data.Shoe
 import com.example.jetpackdemo.db.data.User
 import com.example.jetpackdemo.utils.AppPrefsUtils
 import com.example.jetpackdemo.worker.ShoeWorker
@@ -23,7 +25,7 @@ import com.example.jetpackdemo.worker.ShoeWorker
 //メモリとキャッシュの値に差異が出ないよう「フィールドの値がキャッシュされることを防止する」=「共有のメモリからしか値を取得出来ない」
 //スレッドからアクセスされるたび、必ず、共有メモリ上の変数の値とスレッド上の値を一致させる。
 //なので、複数スレッドからアクセスされる可能性がある場合、@Volatileとして宣言しておくと良い。
-@Database(entities = [User::class], version = 2, exportSchema = false)
+@Database(entities = [User::class, Shoe::class, FavouriteShoe::class], version = 2, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class AppDataBase: RoomDatabase() {
     // 得到UserDao
